@@ -19,3 +19,10 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+from django.urls import path
+from blog import views
+
+urlpatterns = [
+    path('', views.post_list, name='post_list'),
+]
